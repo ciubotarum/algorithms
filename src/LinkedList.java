@@ -95,6 +95,47 @@ public class LinkedList {
         return null;
     }
 
+    public void show() {
+        Node node = first;
+
+        while (node.next != null) {
+            System.out.println(node.value);
+            node = node.next;
+        }
+        System.out.println(node.value);
+
+    }
+    public void insertAt(int index, int value) {
+        Node node = new Node(value);
+
+        if (index == 0) {
+            addFirst(value);
+        } else {
+            Node n = first;
+            for (int i = 0; i < index - 1; i++) {
+                n = n.next;
+            }
+            node.next = n.next;
+            n.next = node;
+        }
+    }
+
+    public void deleteAt(int index) {
+        if (index == 0) {
+            deleteFirst();
+        } else {
+            Node n = first;
+            Node n1 = null;
+            for (int i = 0; i < index - 1; i++) {
+                n = n.next;
+            }
+            n1 = n.next;
+            n.next = n1.next;
+            System.out.println("n1 " + n1.value);
+            n1 = null;
+        }
+    }
+
     public static void main(String[] args) {
 //        java.util.LinkedList<String> x = new java.util.LinkedList<>();
 //        x.removeFirst();
@@ -104,7 +145,16 @@ public class LinkedList {
         // addLast
         list.addLast(10);
         list.addLast(20);
+        // insert in the middle
+        list.insertAt(2, 55);
+
         list.addLast(30);
+
+        // delete in the middle
+        list.deleteAt(2);
+
+        // print the LinkedList
+        list.show();
         // deleteFirst
         list.deleteFirst();
         // deleteLast
