@@ -1,1 +1,3 @@
-# algorithms
+# Algorithms
+
+Solving java tasks.
