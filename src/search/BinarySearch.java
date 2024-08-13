@@ -1,16 +1,7 @@
-public class Search {
-    public static int linearSearch(int[] nums, int target) {
-        int steps = 0;
-        for (int i = 0; i < nums.length; i++) {
-            steps++;
-            if (nums[i] == target) {
-                System.out.println("Steps taken by Linear : " + steps);
-                return i;
-            }
-        }
-        System.out.println("Steps taken by Linear : " + steps);
-        return -1;
-    }
+package search;
+
+public class BinarySearch {
+
     public static int binarySearch(int[] nums, int target, int left, int right) {
         // 5, 7, 9, 11, 13
 
@@ -57,7 +48,6 @@ public class Search {
 //        int[] nums = new int[1000];
 //        int target = 900;
 
-//        int result = linearSearch(nums, target);
 //        int result = binarySearch(nums, target);
         int result = binarySearch(nums, target, 0, nums.length - 1);
 

@@ -21,7 +21,8 @@ public class FindMaximumElement {
 
     }
     public static void main(String[] args) {
-        int[] array = {12, 11, 13, 5, 6, 7};
+//        int[] array = {12, 11, 13, 5, 6, 7};
+        int[] array = {12, 11, 13, 5, 6, 7, 15};
 //        int[] array = {};
 
         System.out.println(findMaximumElement(array));
