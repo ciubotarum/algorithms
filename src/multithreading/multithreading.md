@@ -54,3 +54,18 @@ Definition:
 - 5 priority is AVERAGE_PRIORITY
 - Threads with the same priority gets executed in FIFO manner
 - The threads scheduler stores the threads in a queue
+
+## Thread Pool
+- Software design pattern for achieving concurrency of execution in a program
+
+## Executor Service
+- simplifies running tasks in asynchronous mode
+- automatically provides a pool of threads and API for assigning tasks to it
+- The following line of code will create a thread pool with 10 threads:
+- `ExecutorService executor = Executors.newFixedThreadPool(10);`
+
+Types of `ExecutorService`:
+- SingleThreadExecutor
+- FixedThreadPoolExecutor
+- CachedThreadPool
+- ScheduledExecutor
