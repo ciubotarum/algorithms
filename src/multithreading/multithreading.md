@@ -69,3 +69,53 @@ Types of `ExecutorService`:
 - FixedThreadPoolExecutor
 - CachedThreadPool
 - ScheduledExecutor
+
+## Concurrent Collections
+
+- Collections are not thread safe
+- To make them thread safe:
+    - Use `Collections.synchronize()` method
+    - Use the concurrent collections which are synchronized
+
+Types:
+### Countdown Latch
+- synchronization utility that allows one or more threads to wait until
+    a set of operations which is being performed in another thread completes
+- controlling the flow of executing concurrent programs
+- coordination among multiple threads
+- thread synchronization in a single thread context
+- 
+### Blocking Queue
+- data structure which allows multiple threads to safely put items to the 
+    queue and take items off the queue
+- if a thread try to take an item from a queue which is empty it will be
+paused of block until an item becomes available
+- if a thread try to add an item to a full queue it will be blocked until the
+place becomes available
+- follow FIFO
+- It's a parent of 2 interfaces
+    - BlockingQueue
+    - TransferQueue
+
+Implementations of Blocking Queue:
+- `ArrayBlockingQueue`
+- `LinkedBlockingQueue`
+- `PriorityBlokingQueue`
+- `DelayQueue`
+- `SynchronousQueue`
+
+Blocking Queue Operations
+- `put(E e)`
+    - adds the specified method e to te queue if the space is available
+    - if the queue is full it is blocked until the space become available
+- `take()`
+    - removes the head of the queue
+- `offer(E e)`
+    - adds the specified element to the queue if there are space
+    - returns false or true if the operation was successful
+- `poll()`
+    - retrieves the element of the head of the queue
+    - returns null if the queue is empty
+    - does not block the queue
+- `peek()`
+    - retrieves but does not remove the head of the queue
