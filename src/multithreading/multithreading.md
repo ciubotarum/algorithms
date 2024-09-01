@@ -119,3 +119,22 @@ Blocking Queue Operations
     - does not block the queue
 - `peek()`
     - retrieves but does not remove the head of the queue
+
+
+## Concurrent Map
+- Interface that can be accessed safely by multi-threads
+
+Internal Implementation and working of Concurrent Map
+- Adding an element to concurrent hash map
+    - Hashing and Determining Segment
+    - Acquiring Lock
+    - Insertion in Segment
+    - Releasing Lock
+- Fetching an element from concurrent hash map
+    - Same steps
+
+## Cyclic Barrier
+
+- When a thread reaches the checkpoint it calls the await method on the 
+Cyclic barrier
+- The thread waits there until all the other threads are also reached the checkpoint
