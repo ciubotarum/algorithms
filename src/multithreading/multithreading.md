@@ -138,3 +138,30 @@ Internal Implementation and working of Concurrent Map
 - When a thread reaches the checkpoint it calls the await method on the 
 Cyclic barrier
 - The thread waits there until all the other threads are also reached the checkpoint
+
+## Exchanger
+- Synchronization point at which threads compare and swap elements in a 
+concurrent environment
+- 2 threads can call exchange method on the exchanger object
+- is useful when 2 threads need to synchronize and exchange data before
+proceed to their tasks 
+
+## Copy On Write Array _(COWA)_
+
+- Use when you have multiple threads trying to access and modify data
+- When a thread want to read from the array it creates a snapshot of the array
+- It does the same for the write operation
+- When a change is complete that is considered the latest version of the array
+
+## Locks
+- locks provide a way to control access shared resources 
+- ensures that only one thread access the resource at a given time
+
+Synchronized Blocks VS Locks
+- Synchronized Blocks use the `synchronized` keyword to ensure that only one 
+thread can execute a particular section of code in a particular time
+- Locks provide more control on locking mechanisms
+- Interface Lock allow to manually acquire and release the locks
+- Use Synchronized Blocks where performance is not that critical
+- Use Locks for complex synchronization scenarios where flexibility are required
+
