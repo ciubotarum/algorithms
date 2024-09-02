@@ -193,3 +193,16 @@ release a resource they need to proceed
     - write in console `jps -l` while the code is still running
     - get the process id and type `kill -Id process_id`
 
+## Atomic Variables
+- important tool in writing concurrent code
+- support lock free thread safe operations on single variables
+- Types of atomic variables:
+  - AtomicInteger
+  - AtomicBoolean
+  - AtomicLong
+- Basic operations:
+  - `get()` - fetches the current value
+  - `set()` - set some value
+  - `compareAndSet(expected, update)` - sets the value to update value
+  - `getAndIncrement()`/`incrementAndGet()`
+  - `getAndDecrement()`/`decrementAndGet()`
