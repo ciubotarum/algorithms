@@ -165,3 +165,31 @@ thread can execute a particular section of code in a particular time
 - Use Synchronized Blocks where performance is not that critical
 - Use Locks for complex synchronization scenarios where flexibility are required
 
+### Reentrant Lock
+- an implementation of Lock Interface
+- it allows a thread to acquire the same lock multiple times without 
+blocking himself
+- Important methods:
+    - `getHoldCount()` - return an integer which is a number of times the
+    current thread has acquired the lock
+    - `tryLock()` - an approach when we request a thread to try a lock,
+    the result is a boolean, tells if a thread was successfully acquired or not
+    - `tryLock(timeout, timeUnit)` - ask a thread to acquire the lock and be 
+    blocked for the given time duration, if the lock can't be acquired in the time
+    period it returns false
+    - `isHeldByCurrentThread()`
+    - `getQueueLength()`
+    - `newCondition()` 
+
+### Read Write Lock
+- a synchronization method which allows multiple threads to read but only one
+to write
+- used when is more likely to read than to write
+
+### Deadlock
+- it occurs when 2 or more threads a blocked forever, each waiting another to
+release a resource they need to proceed
+- how to handle:
+    - write in console `jps -l` while the code is still running
+    - get the process id and type `kill -Id process_id`
+
