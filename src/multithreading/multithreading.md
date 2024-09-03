@@ -206,3 +206,15 @@ release a resource they need to proceed
   - `compareAndSet(expected, update)` - sets the value to update value
   - `getAndIncrement()`/`incrementAndGet()`
   - `getAndDecrement()`/`decrementAndGet()`
+
+## Semaphores
+- is a synchronization mechanism used to control access to a shared resource in
+concurrent programming
+- `acquire()` - thread request a permit
+- it provides a multi permits
+- Methods of Permits
+    - `tryAcquire()` - thread will try to acquire a permit, if there is no permit
+    available it won't be blocked and try to do something else
+    - `tryAcquire(timeout)` - the same but have timeout
+    - `availablePermits()` - nr. of available permits within a given semaphore
+    - `new Semaphore(count, fairness)`
