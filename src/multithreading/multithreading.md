@@ -218,3 +218,29 @@ concurrent programming
     - `tryAcquire(timeout)` - the same but have timeout
     - `availablePermits()` - nr. of available permits within a given semaphore
     - `new Semaphore(count, fairness)`
+
+## Mutex
+- Is a short form of the word mutual exclusion
+- It is a synchronization mechanism used to control access to a shared resource
+- Ensures that only one thread is able to access a critical section of a shared
+resource at a given time
+
+## Fork Join
+- a concurrency framework
+- Fork Join can create subtasks of a task to simplify the problem  
+- utilization of multi cores processors
+- simplified parallelism
+- Key Concepts:
+    - Forking - process of breaking down tasks into smaller tasks
+    - Joining - process of waiting a fork task to complete and combine the sol.
+    - RecursiveTask - abstract class and used for teh task that return a result
+    - Recursive Action - use for tasks that do not return any result
+- Fork Join Pool
+    - a specialized implementation of executor service 
+    - Work stealing algorithm - manage and balance the work load among threads
+    if a thread finished his tasks it can steal tasks from other threads
+    - Parallelism 
+    - Fork & Join Algorithm - a task can be split into smaller subtasks and 
+    the results can be combined
+    - Managing Fork Join Tasks - these tasks encapsulate the logic for 
+    splitting the work and combining the results
