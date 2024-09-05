@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.NoSuchElementException;
 
 public class LinkedList {
@@ -30,8 +32,8 @@ public class LinkedList {
         return first == null;
     }
     public void addLast(int item) {
-        // rap item in a Node object
-//        Node node = new Node();  // or we can write
+        // rap item in a classes.Node object
+//        classes.Node node = new classes.Node();  // or we can write
         var node = new Node(item);
 
         if (isEmpty()) {
@@ -137,7 +139,7 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-//        java.util.LinkedList<String> x = new java.util.LinkedList<>();
+//        java.util.classes.LinkedList<String> x = new java.util.classes.LinkedList<>();
 //        x.removeFirst();
         var list = new LinkedList();
         // addFirst
@@ -153,7 +155,7 @@ public class LinkedList {
         // delete in the middle
         list.deleteAt(2);
 
-        // print the LinkedList
+        // print the classes.LinkedList
         list.show();
         // deleteFirst
         list.deleteFirst();

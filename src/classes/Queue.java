@@ -1,3 +1,5 @@
+package classes;
+
 // First In First Out
 public class Queue {
     int[] queue = new int[5];
@@ -11,7 +13,7 @@ public class Queue {
             rear = (rear + 1) % 5;
             size++;
         } else {
-            System.out.println("Queue is Full");
+            System.out.println("classes.Queue is Full");
         }
 
     }
@@ -33,7 +35,7 @@ public class Queue {
             front = (front + 1) % 5;
             size -= 1;
         } else {
-            System.out.println("Queue is empty");
+            System.out.println("classes.Queue is empty");
         }
 
 

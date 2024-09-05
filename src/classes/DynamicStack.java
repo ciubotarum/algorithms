@@ -1,3 +1,5 @@
+package classes;
+
 public class DynamicStack {
     int capacity = 2;
     int[] stack = new int[capacity];
@@ -30,7 +32,7 @@ public class DynamicStack {
     public int pop() {
         int data = 0;
         if (isEmpty()) {
-            System.out.println("Stack is empty");
+            System.out.println("classes.Stack is empty");
         } else {
             top--;
             data = stack[top];

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class GraphList {
 
     // Adjacency List = An array/arrayList of linkedLists
-    //                  Each LinkedList has a unique node at the head.
+    //                  Each classes.LinkedList has a unique node at the head.
     //                  All adjacent neighbors to that node are added to that node's linkedList
 
     ArrayList<LinkedList<Node>> alist;

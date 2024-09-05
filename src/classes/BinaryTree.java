@@ -1,3 +1,5 @@
+package classes;
+
 class Node {
     int data;
     Node left;
